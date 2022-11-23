@@ -1,12 +1,12 @@
-from environs import Env
-
-# ADMINS=835792297
-# BOT_TOKEN="5712717261:AAFVji0TUkHDKpVtQJLl2ocjXkgD-xtwqN8"
-#private
-# IS_POSTING_REQUESTED=False
-# environs kutubxonasidan foydalanish
-env = Env()
-env.read_env()
+# from environs import Env
+#
+# # ADMINS=835792297
+# # BOT_TOKEN="5712717261:AAFVji0TUkHDKpVtQJLl2ocjXkgD-xtwqN8"
+# #private
+# # IS_POSTING_REQUESTED=False
+# # environs kutubxonasidan foydalanish
+# env = Env()
+# env.read_env()
 
 # .env fayl ichidan quyidagilarni o'qiymiz
 # BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
