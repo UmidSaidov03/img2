@@ -4,9 +4,9 @@ async def text_recognition (file_path,text_file_name="result.doc"):
     reader =easyocr.Reader(["ru","en"])
     result = reader.readtext(file_path,detail=0,paragraph=True)
 
-    with open(text_file_name,'w') as file:
-        for line in result:
-            file.write(f"{line}\n\n")
+    # with open(text_file_name,'w') as file:
+    #     for line in result:
+    #         file.write(f"{line}\n\n")
     return result
 
 

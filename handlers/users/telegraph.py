@@ -11,8 +11,8 @@ async def photo_handler(msg:types.Message):
     result=await text_recognition(link)
 
     await msg.answer(result)
-    res_doc=open("result.doc","rb")
-    await bot.send_document(msg.chat.id,document=res_doc)
+    # res_doc=open("result.doc","rb")
+    # await bot.send_document(msg.chat.id,document=res_doc)
     # await msg.reply_document(document='result.txt',caption="doc")
 
 @dp.message_handler(types.Message)
