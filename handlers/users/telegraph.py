@@ -7,7 +7,7 @@ from loader import bot
 async def photo_handler(msg:types.Message):
     photo=msg.photo[-1]
     link = await photo_link(photo)
-    await msg.answer("Tez orada natija jo'natiladi iltimos kutib turing...")
+    await msg.answer("Tez orada text va Doc file jo'natiladi\nIltimos kutib turing...")
     result=await text_recognition(link)
 
     await msg.answer(result)
