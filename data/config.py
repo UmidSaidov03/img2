@@ -1,6 +1,10 @@
 from environs import Env
-
-# environs kutubxonasidan foydalanish
+#
+# # ADMINS=835792297
+# # BOT_TOKEN="5712717261:AAFVji0TUkHDKpVtQJLl2ocjXkgD-xtwqN8"
+# #private
+# # IS_POSTING_REQUESTED=False
+# # environs kutubxonasidan foydalanish
 env = Env()
 env.read_env()
 
