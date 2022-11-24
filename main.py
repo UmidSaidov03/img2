@@ -1,18 +1,18 @@
-# import easyocr
-#
-# def text_recognition (file_path,text_file_name="result.txt"):
-#     reader =easyocr.Reader(["ru","en"])
-#     result = reader.readtext(file_path,detail=0,paragraph=True)
-#
-#     with open(text_file_name,'w') as file:
-#         for line in result:
-#             file.write(f"{line}\n\n")
-#     return f"Result wrote into {text_file_name}"
+from aiogram import executor
 
-# def main():
-#     file_path=input("Rasm yolini korsating")
-#     print(text_recognition(file_path=file_path,text_file_name="read_me_first.txt"))
-#
-#
-# if __name__ == "__main__":
-#     main()
+from loader import dp
+import middlewares, filters, handlers
+from utils.notify_admins import on_startup_notify
+from utils.set_bot_commands import set_default_commands
+
+
+async def on_startup(dispatcher):
+    # Birlamchi komandalar (/star va /help)
+    await set_default_commands(dispatcher)
+
+    # Bot ishga tushgani haqida adminga xabar berish
+    await on_startup_notify(dispatcher)
+
+
+if __name__ == '__main__':
+    executor.start_polling(dp, on_startup=on_startup)
